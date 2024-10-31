@@ -1,11 +1,11 @@
 package com.essoft.book_service.dto;
 
 public class BookIdDto {
-    private final String id;
+    private final String bookId;
     private final String isbn;
 
     public BookIdDto(String id, String isbn) {
-        this.id = id != null ? id : "";
+        this.bookId = id != null ? id : "";
         this.isbn = isbn;
     }
 
@@ -14,7 +14,7 @@ public class BookIdDto {
     }
 
     public String getId() {
-        return id;
+        return bookId;
     }
 
     public String getIsbn() {
