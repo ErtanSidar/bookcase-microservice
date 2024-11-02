@@ -8,6 +8,7 @@ import com.essoft.library_service.model.Library;
 import com.essoft.library_service.repository.LibraryRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
@@ -48,4 +49,7 @@ public class LibraryService {
         libraryRepository.save(library);
     }
 
+    public List<String> getAllLibraries() {
+        return libraryRepository.findAll().stream().map(Library::getId).collect(Collectors.toList());
+    }
 }
